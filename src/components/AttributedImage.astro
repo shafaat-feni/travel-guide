@@ -2,10 +2,10 @@
 interface Props {
   src: string;
   alt: string;
-  caption: string;
-  attributionName: string;
+  caption?: string;
+  attributionName?: string;
   attributionUrl?: string;
-  licenseName: string;
+  licenseName?: string;
   licenseUrl?: string;
   width?: number;
   height?: number;
@@ -13,60 +13,64 @@ interface Props {
   fetchpriority?: 'high' | 'low' | 'auto';
 }
 
-const {
-  src,
-  alt,
-  caption,
-  attributionName,
-  attributionUrl,
-  licenseName,
-  licenseUrl,
-  width = 800,
-  height = 450
-  loading = 'lazy',
-  fetchpriority = 'auto'
-} = Astro.props;
+const props = Astro.props;
+const src = props.src;
+const alt = props.alt;
+const caption = props.caption;
+const attributionName = props.attributionName;
+const attributionUrl = props.attributionUrl;
+const licenseName = props.licenseName;
+const licenseUrl = props.licenseUrl;
+const width = props.width ?? 800;
+const height = props.height ?? 450;
+const loading = props.loading ?? 'lazy';
+const fetchpriority = props.fetchpriority ?? 'auto';
 ---
 
-<figure class="attributed-figure">
-  <img 
-    src={src} 
-    alt={alt} 
-    width={width} 
-    height={height} 
-    loading={loading}
-    fetchpriority={fetchpriority}
-    class="figure-img"
-    onerror="this.style.display='none'; if(this.parentElement) this.parentElement.style.display='none';"
-  />
-  <figcaption class="figure-caption">
-    <span class="caption-text">{caption}</span>
-    <span class="attribution-text">
-      Photo: 
-      {attributionUrl ? (
-        <a href={attributionUrl} target="_blank" rel="noopener noreferrer">{attributionName}</a>
-      ) : (
-        <span>{attributionName}</span>
-      )}
-      ({licenseUrl ? (
-        <a href={licenseUrl} target="_blank" rel="noopener noreferrer">{licenseName}</a>
-      ) : (
-        <span>{licenseName}</span>
-      )})
-    </span>
-  </figcaption>
-</figure>
+{src && (
+  <figure class="attributed-figure">
+    <div class="image-wrapper">
+      <img 
+        src={src} 
+        alt={alt} 
+        width={width} 
+        height={height} 
+        loading={loading}
+        fetchpriority={fetchpriority}
+        class="attributed-img"
+        onerror="this.style.display='none'; if(this.parentElement) this.parentElement.style.display='none';"
+      />
+    </div>
+    {(caption || attributionName) && (
+      <figcaption class="figure-caption">
+        {caption && <span class="caption-text">{caption}</span>}
+        {attributionName && (
+          <span class="attribution-text">
+            Image by {attributionUrl ? <a href={attributionUrl} target="_blank" rel="noopener noreferrer">{attributionName}</a> : attributionName}
+            {licenseName && (
+              <span> under {licenseUrl ? <a href={licenseUrl} target="_blank" rel="noopener noreferrer">{licenseName}</a> : licenseName}</span>
+            )}
+          </span>
+        )}
+      </figcaption>
+    )}
+  </figure>
+)}
 
 <style>
   .attributed-figure {
     margin: var(--spacing-lg) 0;
+    width: 100%;
+  }
+
+  .image-wrapper {
     border-radius: var(--radius-md);
     overflow: hidden;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
   }
 
-  .figure-img {
+  .attributed-img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -74,27 +78,26 @@ const {
   }
 
   .figure-caption {
-    padding: var(--spacing-sm) var(--spacing-md);
+    margin-top: var(--spacing-xs);
     font-size: 0.8125rem;
     color: var(--color-text-muted);
-    background-color: var(--color-bg);
-    border-top: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     gap: 2px;
+    padding: 0 var(--spacing-xs);
   }
 
   .caption-text {
-    color: var(--color-text);
     font-weight: 500;
-  }
-
-  .attribution-text {
-    font-size: 0.75rem;
+    color: var(--color-text);
   }
 
   .attribution-text a {
     color: var(--color-primary);
     text-decoration: underline;
+  }
+
+  .attribution-text a:hover {
+    color: var(--color-primary-dark);
   }
 </style>
