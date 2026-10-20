@@ -1,0 +1,87 @@
+---
+interface Props {
+  latitude: number;
+  longitude: number;
+  zoomDelta?: number;
+  title: string;
+}
+
+const { latitude, longitude, zoomDelta = 0.05, title } = Astro.props;
+
+const minLon = (longitude - zoomDelta).toFixed(4);
+const maxLon = (longitude + zoomDelta).toFixed(4);
+const minLat = (latitude - zoomDelta).toFixed(4);
+const maxLat = (latitude + zoomDelta).toFixed(4);
+
+const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${minLon}%2C${minLat}%2C${maxLon}%2C${maxLat}&layer=mapnik&marker=${latitude}%2C${longitude}`;
+const externalUrl = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=13/${latitude}/${longitude}`;
+---
+
+<div class="map-wrapper">
+  <div class="map-header">
+    <span class="map-icon" aria-hidden="true">🗺️</span>
+    <h3 class="map-title">Interactive Map: {title}</h3>
+  </div>
+  <div class="map-frame-container">
+    <iframe 
+      title={`Interactive OpenStreetMap location map for ${title}`}
+      src={mapUrl}
+      width="100%" 
+      height="320" 
+      loading="lazy" 
+      style="border:0;"
+      aria-label={`Map showing location of ${title}`}
+    ></iframe>
+  </div>
+  <div class="map-footer">
+    <a href={externalUrl} target="_blank" rel="noopener noreferrer" class="map-external-link">
+      View larger map on OpenStreetMap
+      <span class="sr-only"> (opens in a new tab)</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .map-wrapper {
+    margin: var(--spacing-xl) 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-surface);
+  }
+
+  .map-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .map-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--color-primary-dark);
+    margin: 0;
+  }
+
+  .map-frame-container {
+    width: 100%;
+    height: 320px;
+    background-color: var(--color-border);
+  }
+
+  .map-footer {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.8125rem;
+    text-align: right;
+  }
+
+  .map-external-link {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+</style>

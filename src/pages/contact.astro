@@ -1,0 +1,96 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+
+const breadcrumbs = [{ name: 'Contact', path: '/contact/' }];
+---
+
+<BaseLayout 
+  title="Contact Us — Bangladesh Travel Guide" 
+  description="Contact Bangladesh Travel Guide for general inquiries, feedback, editorial corrections, or partnership inquiries."
+>
+  <div class="container content-narrow section">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="contact-header">
+      <h1 class="contact-title">Contact Us</h1>
+      <p class="contact-lead">
+        We welcome inquiries, corrections, and editorial feedback from readers and travel partners.
+      </p>
+    </header>
+
+    <div class="contact-body">
+      <div class="contact-card">
+        <h2>Editorial & General Inquiries</h2>
+        <p>
+          If you have identified a travel rule that has changed or wish to report an error, please reach out to our editorial team via email:
+        </p>
+        <p class="contact-email">
+          <strong>Email:</strong> <a href="mailto:shafaat.feni@gmail.com">contact@bangladeshtravelguide.com</a>
+        </p>
+      </div>
+
+      <div class="contact-notice">
+        <h3>Immigration & Official Emergency Notice</h3>
+        <p>
+          Please note that Bangladesh Travel Guide is an independent travel publication. We cannot issue visas, check official visa status, or provide direct government support. For urgent consular assistance, contact your national embassy in Dhaka or official Bangladesh immigration authorities.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .contact-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .contact-lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+  }
+
+  .contact-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .contact-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .contact-email {
+    font-size: 1.125rem;
+    margin-top: var(--spacing-md);
+  }
+
+  .contact-notice {
+    background-color: var(--color-info-bg);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .contact-notice h3 {
+    font-size: 1rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+</style>

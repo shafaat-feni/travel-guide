@@ -1,0 +1,208 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import SourceList from '@components/SourceList.astro';
+import AdPlaceholder from '@components/AdPlaceholder.astro';
+import InteractiveMap from '@components/InteractiveMap.astro';
+
+export async function getStaticPaths() {
+  const destinations = await getCollection('destinations', ({ data }) => !data.draft);
+  return destinations.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'destinations'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const breadcrumbs = [
+  { name: 'Destinations', path: '/destinations/' },
+  { name: entry.data.title, path: `/destinations/${entry.slug}/` }
+];
+
+const formattedPublish = new Date(entry.data.publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+// Map Coordinates Lookup for Destinations
+const coordinatesMap: Record<string, { lat: number; lon: number; title: string }> = {
+  'dhaka-travel-guide': { lat: 23.7104, lon: 90.3882, title: 'Dhaka & Old Dhaka Historic District' },
+  'cox-s-bazar-travel-guide': { lat: 21.4272, lon: 91.9702, title: "Cox's Bazar Coastal Region" },
+  'sylhet-travel-guide': { lat: 24.8949, lon: 91.8687, title: 'Sylhet Division & City Center' },
+  'srimangal-travel-guide': { lat: 24.3065, lon: 91.7296, title: 'Srimangal Tea Valley & Lawachara' },
+  'sundarbans-travel-guide': { lat: 22.0257, lon: 89.6083, title: 'Sundarbans Mangrove Forest Region' }
+};
+
+const currentCoords = coordinatesMap[entry.slug];
+---
+
+<BaseLayout 
+  title={entry.data.seoTitle || entry.data.title} 
+  description={entry.data.seoDescription || entry.data.description}
+  canonicalUrl={entry.data.canonicalUrl}
+  image={entry.data.featuredImage}
+  type="article"
+>
+  <article class="article-container container content-narrow">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="article-header">
+      <span class="article-category">{entry.data.category}</span>
+      <h1 class="article-title">{entry.data.title}</h1>
+      <p class="article-lead">{entry.data.description}</p>
+
+      <div class="destination-meta-pills">
+        {entry.data.region && (
+          <span class="meta-pill"><strong>Region:</strong> {entry.data.region}</span>
+        )}
+        {entry.data.bestTimeToVisit && (
+          <span class="meta-pill"><strong>Best Time:</strong> {entry.data.bestTimeToVisit}</span>
+        )}
+        <span class="meta-pill"><strong>Updated:</strong> {formattedPublish}</span>
+      </div>
+    </header>
+
+    {entry.data.featuredImage && entry.data.featuredImageAlt && (
+      <div class="featured-image-wrapper">
+        <img 
+          src={entry.data.featuredImage} 
+          alt={entry.data.featuredImageAlt} 
+          width="800" 
+          height="450" 
+          class="featured-image"
+          loading="eager"
+          fetchpriority="high"
+          onerror="this.style.display='none'; if(this.parentElement) this.parentElement.style.display='none';"
+        />
+      </div>
+    )}
+
+    {currentCoords && (
+      <InteractiveMap latitude={currentCoords.lat} longitude={currentCoords.lon} title={currentCoords.title} />
+    )}
+
+    <AdPlaceholder slotId="destination-top-slot" format="horizontal" />
+
+    <div class="article-body">
+      <Content />
+    </div>
+
+    {entry.data.sources && entry.data.sources.length > 0 && (
+      <SourceList sources={entry.data.sources} />
+    )}
+
+    <AdPlaceholder slotId="destination-bottom-slot" format="rectangle" />
+  </article>
+</BaseLayout>
+
+<style>
+  .article-container {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  .article-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .article-category {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .article-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    line-height: 1.25;
+    color: var(--color-primary-dark);
+    margin: var(--spacing-xs) 0 var(--spacing-md) 0;
+  }
+
+  .article-lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .destination-meta-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .meta-pill {
+    background-color: var(--color-info-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 2px 10px;
+    font-size: 0.8125rem;
+    color: var(--color-text);
+  }
+
+  .featured-image-wrapper {
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .article-body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+
+  .article-body :global(h2) {
+    font-family: var(--font-heading);
+    font-size: 1.625rem;
+    color: var(--color-primary-dark);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-body :global(h3) {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .article-body :global(p) {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .article-body :global(ul), .article-body :global(ol) {
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-xl);
+  }
+
+  .article-body :global(li) {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  @media (max-width: 640px) {
+    .article-title {
+      font-size: 1.75rem;
+    }
+  }
+</style>

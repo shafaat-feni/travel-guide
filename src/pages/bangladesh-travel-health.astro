@@ -1,0 +1,30 @@
+---
+import { getEntry } from 'astro:content';
+import ArticleLayout from '@layouts/ArticleLayout.astro';
+
+const entry = await getEntry('guides', 'bangladesh-travel-health');
+
+if (!entry) {
+  throw new Error("Travel health guide content entry not found.");
+}
+
+const { Content } = await entry.render();
+
+const breadcrumbs = [
+  { name: 'Health Care', path: '/bangladesh-travel-health/' }
+];
+---
+
+<ArticleLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  publishDate={entry.data.publishDate}
+  updatedDate={entry.data.updatedDate}
+  category={entry.data.category}
+  breadcrumbs={breadcrumbs}
+  sources={entry.data.sources}
+  featuredImage={entry.data.featuredImage}
+  featuredImageAlt={entry.data.featuredImageAlt}
+>
+  <Content />
+</ArticleLayout>

@@ -1,0 +1,47 @@
+---
+interface Props {
+  slotId?: string;
+  format?: 'auto' | 'rectangle' | 'horizontal';
+  label?: string;
+}
+
+const { slotId = 'default-slot', format = 'auto', label = 'Advertisement' } = Astro.props;
+
+// AdSense Client ID from environment or central configuration
+const adClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || null;
+const isAdEnabled = Boolean(adClientId);
+---
+
+{isAdEnabled ? (
+  <div class="ad-placement-wrapper" data-ad-format={format}>
+    <span class="ad-label">{label}</span>
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client={adClientId}
+           data-ad-slot={slotId}
+           data-ad-format={format}
+           data-full-width-responsive="true"></ins>
+      <script is:inline>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+) : null}
+
+<style>
+  .ad-placement-wrapper {
+    margin: var(--spacing-xl) 0;
+    text-align: center;
+    clear: both;
+  }
+
+  .ad-label {
+    display: block;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+  }
+</style>

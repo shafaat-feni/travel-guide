@@ -1,0 +1,215 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs, { type BreadcrumbItem } from '@components/Breadcrumbs.astro';
+import SourceList, { type SourceItem } from '@components/SourceList.astro';
+import AdPlaceholder from '@components/AdPlaceholder.astro';
+import { SITE_CONFIG } from '@config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  updatedDate?: Date;
+  category: string;
+  breadcrumbs: BreadcrumbItem[];
+  sources?: SourceItem[];
+  canonicalUrl?: string;
+  featuredImage?: string;
+  featuredImageAlt?: string;
+}
+
+const {
+  title,
+  description,
+  publishDate,
+  updatedDate,
+  category,
+  breadcrumbs,
+  sources = [],
+  canonicalUrl,
+  featuredImage,
+  featuredImageAlt
+} = Astro.props;
+
+const formattedPublish = new Date(publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const formattedUpdate = updatedDate ? new Date(updatedDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}) : null;
+
+const siteOrigin = SITE_CONFIG.canonicalDomain.replace(/\/$/, '');
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": publishDate.toISOString(),
+  "dateModified": updatedDate ? updatedDate.toISOString() : publishDate.toISOString(),
+  "publisher": {
+    "@type": SITE_CONFIG.publisher.type,
+    "name": SITE_CONFIG.publisher.name,
+    "url": siteOrigin
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl || `${siteOrigin}${Astro.url.pathname}`
+  }
+};
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl} image={featuredImage} type="article">
+  <article class="article-container container content-narrow">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="article-header">
+      <span class="article-category">{category}</span>
+      <h1 class="article-title">{title}</h1>
+      <p class="article-lead">{description}</p>
+
+      <div class="article-meta">
+        <span class="meta-item">
+          Published: <time datetime={publishDate.toISOString()}>{formattedPublish}</time>
+        </span>
+        {formattedUpdate && (
+          <span class="meta-item updated-date">
+            Last Verified: <time datetime={updatedDate?.toISOString()}>{formattedUpdate}</time>
+          </span>
+        )}
+        <span class="meta-item publisher-tag">Source: {SITE_CONFIG.publisher.name}</span>
+      </div>
+    </header>
+
+    {featuredImage && featuredImageAlt && (
+      <div class="featured-image-container">
+        <img src={featuredImage} alt={featuredImageAlt} width="800" height="450" class="featured-image" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
+      </div>
+    )}
+
+    <!-- In-Content Monetization Placeholder -->
+    <AdPlaceholder slotId="article-top-slot" format="horizontal" />
+
+    <div class="article-body">
+      <slot />
+    </div>
+
+    {sources.length > 0 && <SourceList sources={sources} />}
+
+    <!-- Article End Monetization Placeholder -->
+    <AdPlaceholder slotId="article-bottom-slot" format="rectangle" />
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+</BaseLayout>
+
+<style>
+  .article-container {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  .article-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .article-category {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .article-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    line-height: 1.25;
+    color: var(--color-primary-dark);
+    margin: var(--spacing-xs) 0 var(--spacing-md) 0;
+  }
+
+  .article-lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .updated-date {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  .featured-image-container {
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .article-body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+
+  .article-body :global(h2) {
+    font-family: var(--font-heading);
+    font-size: 1.625rem;
+    color: var(--color-primary-dark);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-body :global(h3) {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .article-body :global(p) {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .article-body :global(ul), .article-body :global(ol) {
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-xl);
+  }
+
+  .article-body :global(li) {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  /* Responsive Mobile Typography Adjustment */
+  @media (max-width: 640px) {
+    .article-title {
+      font-size: 1.75rem;
+    }
+    .article-lead {
+      font-size: 1rem;
+    }
+  }
+</style>

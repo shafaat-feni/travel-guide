@@ -1,0 +1,82 @@
+---
+export interface SourceItem {
+  title: string;
+  url: string;
+  publisher: string;
+  accessedDate?: string;
+}
+
+interface Props {
+  sources: SourceItem[];
+}
+
+const { sources } = Astro.props;
+---
+
+<div class="source-list-container">
+  <h3 class="source-list-heading">Official & Referenced Sources</h3>
+  <ul class="source-list">
+    {sources.map((source) => (
+      <li class="source-item">
+        <a 
+          href={source.url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="source-link"
+        >
+          {source.title}
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <span class="source-publisher">— {source.publisher}</span>
+        {source.accessedDate && (
+          <span class="source-date">(Accessed: {source.accessedDate})</span>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .source-list-container {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .source-list-heading {
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .source-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .source-item {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .source-link {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .source-publisher {
+    color: var(--color-text-muted);
+    margin-left: 0.25rem;
+  }
+
+  .source-date {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin-left: 0.5rem;
+  }
+</style>

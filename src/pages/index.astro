@@ -1,0 +1,358 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import NoticeBox from '@components/NoticeBox.astro';
+import { getCollection } from 'astro:content';
+
+// Fetch published destinations and guides safely
+const allDestinations = await getCollection('destinations', ({ data }) => !data.draft);
+const allGuides = await getCollection('guides', ({ data }) => !data.draft);
+
+const featuredDestinations = allDestinations.slice(0, 3);
+const recentGuides = allGuides.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()).slice(0, 3);
+---
+
+<BaseLayout 
+  title="Independent Travel Planning & Safety Guide"
+  description="Practical, trustworthy travel planning advice for visiting Bangladesh safely, legally, and comfortably. Visa requirements, transport, and itineraries."
+>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">Independent Travel Publication</span>
+        <h1 class="hero-title">Experience Bangladesh With Confidence</h1>
+        <p class="hero-subtitle">
+          Your trusted independent resource for navigating visas, airport arrivals, transport, safety, and cultural highlights across Bangladesh.
+        </p>
+        <div class="hero-actions">
+          <a href="/plan-your-trip/" class="btn btn-primary">Start Planning Your Trip</a>
+          <a href="/destinations/" class="btn btn-secondary">Explore Destinations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Planning Hubs -->
+  <section class="section planning-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Plan Your Journey</h2>
+        <p class="section-subtitle">Essential guides to prepare for your entry and stay in Bangladesh.</p>
+      </div>
+
+      <div class="planning-grid">
+        <a href="/plan-your-trip/bangladesh-visa/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">🛂</span>
+          <h3>Visa & Entry</h3>
+          <p>Requirements, Visa on Arrival rules, and application resources.</p>
+        </a>
+
+        <a href="/plan-your-trip/dhaka-airport-arrival-guide/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">✈️</span>
+          <h3>Airport Arrival</h3>
+          <p>Navigating Hazrat Shahjalal International Airport (DAC).</p>
+        </a>
+
+        <a href="/plan-your-trip/money-and-currency/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">💱</span>
+          <h3>Money & ATMs</h3>
+          <p>Currency exchange, Bangladeshi Taka, cards, and cash tips.</p>
+        </a>
+
+        <a href="/plan-your-trip/sim-cards-and-esims/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">📱</span>
+          <h3>SIM Cards & eSIMs</h3>
+          <p>Staying connected with local mobile networks upon arrival.</p>
+        </a>
+
+        <a href="/plan-your-trip/transport-in-bangladesh/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">🚆</span>
+          <h3>Transport</h3>
+          <p>Trains, ride-sharing apps, domestic flights, and river travel.</p>
+        </a>
+
+        <a href="/bangladesh-travel-safety/" class="planning-card">
+          <span class="planning-icon" aria-hidden="true">🛡️</span>
+          <h3>Safety & Health</h3>
+          <p>Official advisories, health precautions, and emergency contacts.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Destinations Section -->
+  <section class="section destinations-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Major Destinations</h2>
+        <p class="section-subtitle">From the mangrove forests of the Sundarbans to the tea gardens of Sylhet.</p>
+      </div>
+
+      {featuredDestinations.length > 0 ? (
+        <div class="cards-grid">
+          {featuredDestinations.map((dest) => (
+            <ArticleCard 
+              title={dest.data.title}
+              description={dest.data.description}
+              url={`/destinations/${dest.slug}/`}
+              category={dest.data.category}
+              image={dest.data.featuredImage}
+              imageAlt={dest.data.featuredImageAlt}
+              publishDate={dest.data.publishDate}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="editorial-placeholder">
+          <p>Destination guides are currently being compiled from verified research. Check back soon or visit our <a href="/destinations/">Destinations Hub</a>.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Notice / Safety Banner -->
+  <section class="container">
+    <NoticeBox type="caution" title="Important Planning Note">
+      Travel requirements, visa regulations, and transport schedules in Bangladesh can change. Always verify critical information directly with official government portals or your country's diplomatic mission before booking travel.
+    </NoticeBox>
+  </section>
+
+  <!-- Recently Published Guides -->
+  {recentGuides.length > 0 && (
+    <section class="section recent-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest Planning Guides</h2>
+          <p class="section-subtitle">Freshly researched articles to answer your specific travel questions.</p>
+        </div>
+        <div class="cards-grid">
+          {recentGuides.map((guide) => (
+            <ArticleCard 
+              title={guide.data.title}
+              description={guide.data.description}
+              url={`/plan-your-trip/${guide.slug}/`}
+              category={guide.data.category}
+              image={guide.data.featuredImage}
+              imageAlt={guide.data.featuredImageAlt}
+              publishDate={guide.data.publishDate}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Editorial Transparency Footer Section -->
+  <section class="section transparency-section">
+    <div class="container content-narrow">
+      <h2>Our Editorial Standard</h2>
+      <p>
+        Bangladesh Travel Guide is an independent information publication. We prioritize official government sources, civil aviation data, and verified travel practices to ensure our readers receive accurate, unbiased guidance. Read more about our <a href="/editorial-policy/">Editorial Standards</a> and <a href="/about/">About Us</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    background-color: var(--color-primary-dark);
+    color: #ffffff;
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+  }
+
+  .hero-container {
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: rgba(212, 163, 115, 0.2);
+    color: var(--color-accent);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 50px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-decoration: none;
+    min-height: 44px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+  }
+
+  .btn-primary:hover {
+    background-color: #e0b185;
+    color: var(--color-primary-dark);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+  }
+
+  .planning-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .planning-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .planning-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+  }
+
+  .planning-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .planning-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    color: var(--color-primary-dark);
+  }
+
+  .planning-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .editorial-placeholder {
+    background-color: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+  }
+
+  .transparency-section {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .transparency-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-dark);
+  }
+
+  .transparency-section p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  @media (min-width: 640px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-actions {
+      flex-direction: row;
+    }
+    .planning-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .planning-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

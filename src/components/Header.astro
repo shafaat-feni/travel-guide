@@ -1,0 +1,241 @@
+---
+import { SITE_CONFIG } from '@config/site';
+
+const currentPath = Astro.url.pathname;
+
+const isPathActive = (itemPath: string, current: string) => {
+  if (itemPath === '/') {
+    return current === '/';
+  }
+  return current === itemPath || current.startsWith(itemPath);
+};
+---
+
+<header class="site-header">
+  <div class="container header-container">
+    <a href="/" class="brand-link" aria-label="Bangladesh Travel Guide Homepage">
+      <svg class="brand-logo" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#1b4332"/>
+        <circle cx="32" cy="32" r="16" fill="#d4a373"/>
+        <path d="M32 20 L35 28 L44 32 L35 36 L32 44 L29 36 L20 32 L29 28 Z" fill="#1b4332"/>
+      </svg>
+      <span class="brand-title">{SITE_CONFIG.name}</span>
+    </a>
+
+    <button 
+      id="mobile-menu-toggle" 
+      class="menu-toggle" 
+      aria-expanded="false" 
+      aria-controls="primary-navigation"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+
+    <nav id="primary-navigation" class="primary-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        {SITE_CONFIG.navigation.map((item) => {
+          const isActive = isPathActive(item.path, currentPath);
+          return (
+            <li class="nav-item">
+              <a 
+                href={item.path} 
+                class:list={['nav-link', { active: isActive }]}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .brand-logo {
+    flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
+
+  .hamburger-bar {
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-primary-dark);
+  }
+
+  .primary-nav {
+    display: block;
+    width: 100%;
+  }
+
+  :global(html.js-enabled) .primary-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md);
+  }
+
+  :global(html.js-enabled) .primary-nav.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    min-height: 44px;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+  }
+
+  .nav-link.active {
+    background-color: var(--color-info-bg);
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none !important;
+    }
+
+    .primary-nav,
+    :global(html.js-enabled) .primary-nav {
+      display: block !important;
+      position: static;
+      box-shadow: none;
+      border-bottom: none;
+      padding: 0;
+      width: auto;
+    }
+
+    .nav-list {
+      flex-direction: row;
+      gap: var(--spacing-sm);
+    }
+
+    .nav-link {
+      padding: var(--spacing-xs) var(--spacing-md);
+    }
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+
+  const initMenu = () => {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const nav = document.getElementById('primary-navigation');
+
+    if (!toggleBtn || !nav) return;
+
+    if (toggleBtn.hasAttribute('data-menu-initialized')) return;
+    toggleBtn.setAttribute('data-menu-initialized', 'true');
+
+    const toggleNav = (show?: boolean) => {
+      const isExpanded = show !== undefined ? show : toggleBtn.getAttribute('aria-expanded') !== 'true';
+      toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+      if (isExpanded) {
+        nav.classList.add('is-open');
+      } else {
+        nav.classList.remove('is-open');
+      }
+    };
+
+    toggleBtn.addEventListener('click', () => toggleNav());
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          toggleNav(false);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toggleBtn.getAttribute('aria-expanded') === 'true') {
+        toggleNav(false);
+        toggleBtn.focus();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const target = e.target as Node;
+      if (
+        toggleBtn.getAttribute('aria-expanded') === 'true' &&
+        !toggleBtn.contains(target) &&
+        !nav.contains(target)
+      ) {
+        toggleNav(false);
+      }
+    });
+  };
+
+  initMenu();
+  document.addEventListener('astro:after-swap', initMenu);
+</script>

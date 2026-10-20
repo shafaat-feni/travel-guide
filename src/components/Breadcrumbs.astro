@@ -1,0 +1,94 @@
+---
+import { SITE_CONFIG } from '@config/site';
+
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const siteOrigin = SITE_CONFIG.canonicalDomain.replace(/\/$/, '');
+const fullBreadcrumbs = [
+  { name: 'Home', path: '/' },
+  ...items
+];
+
+const schemaList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": fullBreadcrumbs.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": `${siteOrigin}${item.path}`
+  }))
+};
+---
+
+<nav aria-label="Breadcrumbs" class="breadcrumbs-container">
+  <ol class="breadcrumbs-list">
+    {fullBreadcrumbs.map((item, index) => {
+      const isLast = index === fullBreadcrumbs.length - 1;
+      return (
+        <li class="breadcrumb-item">
+          {isLast ? (
+            <span class="breadcrumb-current" aria-current="page">{item.name}</span>
+          ) : (
+            <>
+              <a href={item.path} class="breadcrumb-link">{item.name}</a>
+              <span class="breadcrumb-separator" aria-hidden="true">/</span>
+            </>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaList)} />
+
+<style>
+  .breadcrumbs-container {
+    padding: var(--spacing-sm) 0;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.875rem;
+  }
+
+  .breadcrumbs-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover,
+  .breadcrumb-link:focus-visible {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-separator {
+    color: var(--color-text-muted);
+  }
+
+  .breadcrumb-current {
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+</style>

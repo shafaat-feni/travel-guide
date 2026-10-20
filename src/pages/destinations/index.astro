@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const destinations = await getCollection('destinations', ({ data }) => !data.draft);
+const sortedDestinations = destinations.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const breadcrumbs = [
+  { name: 'Destinations', path: '/destinations/' }
+];
+---
+
+<BaseLayout 
+  title="Bangladesh Destination Guides — Dhaka, Sylhet, Cox's Bazar & More"
+  description="Comprehensive travel guides to major destinations across Bangladesh, including historic sites, natural wonders, tea gardens, and coastal regions."
+>
+  <div class="container section">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="hub-header">
+      <h1 class="hub-title">Destinations in Bangladesh</h1>
+      <p class="hub-subtitle">
+        Explore detailed guides for major cities, coastal beaches, ancient heritage sites, and mangrove forests.
+      </p>
+    </header>
+
+    {sortedDestinations.length > 0 ? (
+      <div class="cards-grid">
+        {sortedDestinations.map((dest) => (
+          <ArticleCard 
+            title={dest.data.title}
+            description={dest.data.description}
+            url={`/destinations/${dest.slug}/`}
+            category={dest.data.category}
+            image={dest.data.featuredImage}
+            imageAlt={dest.data.featuredImageAlt}
+            publishDate={dest.data.publishDate}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="editorial-notice">
+        <p>Our destination guides are currently being prepared. Check back shortly for complete guides to Dhaka, Sylhet, Cox's Bazar, and the Sundarbans.</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .hub-header {
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hub-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .hub-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .editorial-notice {
+    background-color: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+  }
+
+  @media (min-width: 640px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

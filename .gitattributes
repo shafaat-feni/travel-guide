@@ -1,0 +1,2 @@
+# Force Unix line endings for text files to maintain clean cross-platform git history
+* text=auto eol=lf

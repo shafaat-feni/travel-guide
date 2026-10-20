@@ -1,0 +1,71 @@
+---
+interface Props {
+  type?: 'info' | 'caution' | 'warning';
+  title?: string;
+}
+
+const { type = 'info', title } = Astro.props;
+
+const defaultTitles = {
+  info: 'Practical Tip',
+  caution: 'Important Advice',
+  warning: 'Safety & Official Notice'
+};
+
+const boxTitle = title || defaultTitles[type];
+---
+
+<aside class:list={['notice-box', type]} role="note">
+  <div class="notice-header">
+    <span class="notice-icon" aria-hidden="true">
+      {type === 'info' && 'ℹ️'}
+      {type === 'caution' && '💡'}
+      {type === 'warning' && '⚠️'}
+    </span>
+    <strong class="notice-title">{boxTitle}</strong>
+  </div>
+  <div class="notice-content">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .notice-box {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    background-color: var(--color-info-bg);
+  }
+
+  .notice-box.caution {
+    border-left-color: var(--color-accent-light);
+    background-color: var(--color-warning-bg);
+  }
+
+  .notice-box.warning {
+    border-left-color: #dc2626;
+    background-color: #fef2f2;
+  }
+
+  .notice-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .notice-title {
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .notice-content {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .notice-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

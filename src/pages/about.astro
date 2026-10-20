@@ -1,0 +1,98 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+
+const breadcrumbs = [{ name: 'About', path: '/about/' }];
+---
+
+<BaseLayout 
+  title="About Bangladesh Travel Guide — Independent Publication" 
+  description="Learn about Bangladesh Travel Guide, an independent travel publication offering objective, factual advice for foreign visitors."
+>
+  <div class="container content-narrow section">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="about-header">
+      <h1 class="about-title">About Bangladesh Travel Guide</h1>
+      <p class="about-lead">
+        Providing foreign tourists with reliable, transparent, and practical travel guidance for visiting Bangladesh safely and comfortably.
+      </p>
+    </header>
+
+    <div class="about-body">
+      <h2>Our Mission</h2>
+      <p>
+        Bangladesh is a country rich in cultural heritage, natural beauty, and extraordinary hospitality. However, finding clear, consolidated, and updated travel planning advice tailored for international travelers can be challenging.
+      </p>
+      <p>
+        Bangladesh Travel Guide was created to bridge that gap by offering straightforward information on visa procedures, airport arrivals, local transportation, health precautions, and destination planning.
+      </p>
+
+      <h2>Independent Editorial Standard</h2>
+      <p>
+        We operate strictly as an independent travel publication. We do not represent government agencies, and our guides prioritize accurate official sources alongside genuine travel realities to help visitors make informed decisions.
+      </p>
+
+      <div class="about-box">
+        <h3>Need to Contact Us?</h3>
+        <p>
+          Have questions, feedback, or a correction to report? Visit our <a href="/contact/">Contact Page</a> to send an inquiry.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-header {
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .about-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .about-lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .about-body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text);
+  }
+
+  .about-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-body p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-box {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .about-box h3 {
+    font-size: 1.125rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+</style>

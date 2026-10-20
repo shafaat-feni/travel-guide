@@ -1,0 +1,229 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import NoticeBox from '@components/NoticeBox.astro';
+import { getCollection } from 'astro:content';
+
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+const sortedGuides = guides.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const breadcrumbs = [
+  { name: 'Plan Your Trip', path: '/plan-your-trip/' }
+];
+---
+
+<BaseLayout 
+  title="Plan Your Trip to Bangladesh — Visas, Transport, Money & Tips"
+  description="Practical advice for traveling to Bangladesh. Learn about visa rules, airport arrivals, money exchange, eSIMs, transport, safety, and cultural etiquette."
+>
+  <div class="container section">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="hub-header">
+      <h1 class="hub-title">Plan Your Trip to Bangladesh</h1>
+      <p class="hub-subtitle">
+        Essential practical advice, official immigration rules, and logistics guidance for a seamless journey.
+      </p>
+    </header>
+
+    <!-- Essential Planning Categories -->
+    <div class="planning-categories-grid">
+      <a href="/plan-your-trip/bangladesh-visa/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🛂</span>
+        <div class="category-info">
+          <h3>Visa & Entry Rules</h3>
+          <p>Online applications, Visa on Arrival (VoA) eligibility, and embassy steps.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/dhaka-airport-arrival-guide/" class="category-card">
+        <span class="category-icon" aria-hidden="true">✈️</span>
+        <div class="category-info">
+          <h3>Airport Arrival (DAC)</h3>
+          <p>Navigating Hazrat Shahjalal International Airport, VoA desks, and customs.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/money-and-currency/" class="category-card">
+        <span class="category-icon" aria-hidden="true">💱</span>
+        <div class="category-info">
+          <h3>Money & ATMs</h3>
+          <p>Bangladeshi Taka (BDT), foreign card ATMs, airport exchange, and tipping.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/sim-cards-and-esims/" class="category-card">
+        <span class="category-icon" aria-hidden="true">📱</span>
+        <div class="category-info">
+          <h3>SIM Cards & eSIMs</h3>
+          <p>Passport registration rules, BTRC compliance, airport booths, and 4G data.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/transport-in-bangladesh/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🚆</span>
+        <div class="category-info">
+          <h3>Transport & Getting Around</h3>
+          <p>Intercity trains, domestic flights, river launches, Dhaka Metro, and rideshares.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/best-time-to-visit/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🌤️</span>
+        <div class="category-info">
+          <h3>Best Time to Visit</h3>
+          <p>Seasonal weather breakdown, dry winter months, and monsoon climate advice.</p>
+        </div>
+      </a>
+
+      <a href="/plan-your-trip/cultural-etiquette/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🕌</span>
+        <div class="category-info">
+          <h3>Cultural Etiquette</h3>
+          <p>Conservative dress guidelines, temple visiting norms, and local customs.</p>
+        </div>
+      </a>
+
+      <a href="/bangladesh-travel-safety/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🛡️</span>
+        <div class="category-info">
+          <h3>Safety & Security</h3>
+          <p>Official advisories, emergency numbers (999), and tourist police assistance.</p>
+        </div>
+      </a>
+
+      <a href="/bangladesh-travel-health/" class="category-card">
+        <span class="category-icon" aria-hidden="true">🏥</span>
+        <div class="category-info">
+          <h3>Health Precautions</h3>
+          <p>Recommended immunizations, bottled water safety, and Dengue prevention.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Notice Box -->
+    <NoticeBox type="info" title="Official Verification Advisory">
+      Immigration policies, visa-on-arrival rules, and entry fees change periodically. Always verify critical entry regulations directly with official government portals or your country's diplomatic mission prior to departure.
+    </NoticeBox>
+
+    <!-- All Articles Listing Grid -->
+    <div class="hub-articles-section">
+      <h2 class="section-title">All Travel Planning Guides</h2>
+      <div class="cards-grid">
+        {sortedGuides.map((guide) => (
+          <ArticleCard 
+            title={guide.data.title}
+            description={guide.data.description}
+            url={guide.slug === 'bangladesh-travel-safety' ? '/bangladesh-travel-safety/' : guide.slug === 'bangladesh-travel-health' ? '/bangladesh-travel-health/' : `/plan-your-trip/${guide.slug}/`}
+            category={guide.data.category}
+            image={guide.data.featuredImage}
+            imageAlt={guide.data.featuredImageAlt}
+            publishDate={guide.data.publishDate}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .hub-header {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hub-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .hub-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .planning-categories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .category-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+  }
+
+  .category-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .category-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 2px;
+  }
+
+  .category-info p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  .hub-articles-section {
+    margin-top: var(--spacing-2xl);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  @media (min-width: 640px) {
+    .planning-categories-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .planning-categories-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
