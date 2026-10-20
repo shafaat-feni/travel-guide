@@ -8,9 +8,6 @@ export default defineConfig({
     format: 'directory'
   },
   integrations: [
-    sitemap({
-      changefreq: 'weekly',
-      priority: 0.7
-    })
+    sitemap()
   ]
 });
