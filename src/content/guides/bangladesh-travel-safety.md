@@ -51,8 +51,8 @@ Keep these essential emergency numbers recorded in your mobile phone:
 ## Official Travel Advisories & Health Precautions
 
 Foreign governments maintain travel advice portals for their citizens:
-* **United States:** Review the [U.S. Department of State Bangladesh Travel Advisory](https://travel.state.gov/).
-* **United Kingdom:** Consult the [UK FCDO Foreign Travel Advice](https://www.gov.uk/foreign-travel-advice/bangladesh).
+* **United States:** Review the <a href="https://travel.state.gov/" target="blank" rel="noopener noreferrer">U.S. Department of State Bangladesh Travel Advisory</a>.
+* **United Kingdom:** Consult the <a href="https://www.gov.uk/foreign-travel-advice/bangladesh" target="blank" rel="noopener noreferrer">UK FCDO Foreign Travel Advice</a>.
 * **Health Precautions:** Review our [Travel Health & Medical Precautions Guide](/bangladesh-travel-health/) for recommended immunizations and Dengue fever prevention.
 
 Always register your foreign travel with your country's embassy travel registration service (e.g., STEP for U.S. citizens) to receive real-time security alerts during your stay.

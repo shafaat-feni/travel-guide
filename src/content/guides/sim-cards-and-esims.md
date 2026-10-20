@@ -8,7 +8,7 @@ category: "Plan Your Trip"
 tags: ["sim card", "esim", "mobile internet", "4g", "connectivity"]
 sources:
   - title: "Bangladesh Telecommunication Regulatory Commission (BTRC)"
-    url: "http://www.btrc.gov.bd/"
+    url: "http://btrc.gov.bd/"
     publisher: "BTRC"
     accessedDate: "2026-10-20"
 seoTitle: "Bangladesh SIM Cards & eSIMs: Tourist Mobile Data Guide"

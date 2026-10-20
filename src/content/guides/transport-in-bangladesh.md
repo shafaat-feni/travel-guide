@@ -30,7 +30,7 @@ Bangladesh Railway operates an extensive network connecting major regional hubs,
 * **AC Seat / AC Berth:** Available on long-distance sleeper services, providing privacy for overnight journeys.
 
 ### Ticket Booking Advice for Foreign Tourists
-* **Online Booking Portal:** The official [Bangladesh Railway E-Ticketing Portal](https://eticket.railway.gov.bd/) opens tickets for purchase up to 10 days prior to departure. However, registering an online user account requires a valid Bangladeshi mobile number for verification.
+* **Online Booking Portal:** The official <a href="https://eticket.railway.gov.bd/" target="blank" rel="noopener noreferrer">Bangladesh Railway E-Ticketing Portal</a> opens tickets for purchase up to 10 days prior to departure. However, registering an online user account requires a valid Bangladeshi mobile number for verification.
 * **Station Ticket Counters:** Foreign tourists who cannot complete online registration should visit the main reservation counters at major railway stations (such as Kamalapur Railway Station in Dhaka) in person with their physical passport to purchase seats from station quotas.
 
 ## Domestic Flights

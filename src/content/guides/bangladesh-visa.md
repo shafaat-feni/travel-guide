@@ -8,11 +8,11 @@ category: "Plan Your Trip"
 tags: ["visa", "visa on arrival", "immigration", "entry requirements"]
 sources:
   - title: "Bangladesh Department of Immigration and Passports"
-    url: "https://www.immi.gov.bd/"
+    url: "https://dip.gov.bd/"
     publisher: "Government of the People's Republic of Bangladesh"
     accessedDate: "2026-10-20"
   - title: "Bangladesh Online Visa Portal"
-    url: "https://www.visa.gov.bd/"
+    url: "https://visa.gov.bd/"
     publisher: "Ministry of Home Affairs"
     accessedDate: "2026-10-20"
   - title: "U.S. Department of State - Bangladesh International Travel Information"
@@ -30,7 +30,7 @@ Navigating visa and entry requirements is the critical first step in planning a 
 For most foreign nationals, applying for an advance tourist visa via the official Bangladesh Online Visa Portal is the recommended and standard approach.
 
 ### Application Steps
-1. **Complete the Online Application:** Fill out the required personal, passport, and travel details on the official [Bangladesh Online Visa Portal](https://www.visa.gov.bd/).
+1. **Complete the Online Application:** Fill out the required personal, passport, and travel details on the official <a href="https://visa.gov.bd/" target="_blank" rel="noopener noreferrer">Bangladesh Online Visa Portal</a>. *(Note: Because this is an official government server, your browser may occasionally show an SSL security warning due to certificate configurations; you can safely proceed through advanced browser options, or use the <a href="https://dip.gov.bd/" target="_blank" rel="noopener noreferrer">Department of Immigration and Passports</a> portal as a reliable alternative reference).*
 2. **Submit Passport & Documentation:** Print the completed application summary and submit it along with your physical passport, passport-sized photographs, flight itinerary, and hotel booking confirmation to your nearest Bangladesh diplomatic mission or embassy.
 3. **Pay Visa Fees:** Pay the prescribed visa processing fee determined by your country's reciprocal fee structure.
 4. **Visa Issuance:** Once processed, collect your passport containing the stamped visa before departure.
