@@ -6,8 +6,8 @@ const breadcrumbs = [{ name: 'About', path: '/about/' }];
 ---
 
 <BaseLayout 
-  title="About Bangladesh Travel Guide — Independent Publication" 
-  description="Learn about Bangladesh Travel Guide, an independent travel publication offering objective, factual advice for foreign visitors."
+  title="About Bangladesh Travel Guide | Independent Travel Planning Resource" 
+  description="Bangladesh Travel Guide is an independent publication that helps international visitors plan trips to Bangladesh with practical, source-checked information on visas, transport, safety, health, and destinations."
 >
   <div class="container content-narrow section">
     <Breadcrumbs items={breadcrumbs} />
@@ -15,28 +15,52 @@ const breadcrumbs = [{ name: 'About', path: '/about/' }];
     <header class="about-header">
       <h1 class="about-title">About Bangladesh Travel Guide</h1>
       <p class="about-lead">
-        Providing foreign tourists with reliable, transparent, and practical travel guidance for visiting Bangladesh safely and comfortably.
+        An independent, practical travel-planning resource for international visitors to Bangladesh, built around clear information, official sources, and honest advice about risks.
       </p>
     </header>
 
     <div class="about-body">
       <h2>Our Mission</h2>
       <p>
-        Bangladesh is a country rich in cultural heritage, natural beauty, and extraordinary hospitality. However, finding clear, consolidated, and updated travel planning advice tailored for international travelers can be challenging.
+        Bangladesh offers river landscapes, tea country, the world's largest mangrove forest, a long Bay of Bengal coastline, and a deep cultural and religious heritage. For international travellers, however, reliable planning information is often scattered across government portals, outdated forum threads, and promotional pages.
       </p>
       <p>
-        Bangladesh Travel Guide was created to bridge that gap by offering straightforward information on visa procedures, airport arrivals, local transportation, health precautions, and destination planning.
+        Bangladesh Travel Guide brings that information together in one place. Our aim is to help you decide where to go, when to travel, how to get there, and what to prepare, with realistic advice rather than promotional language.
       </p>
+
+      <h2>What We Cover</h2>
+      <ul>
+        <li><strong>Planning essentials:</strong> <a href="/plan-your-trip/">trip planning</a>, the <a href="/plan-your-trip/best-time-to-visit/">best time to visit</a>, <a href="/plan-your-trip/money-and-currency/">money and currency</a>, and <a href="/plan-your-trip/sim-cards-and-esims/">SIM cards and eSIMs</a>.</li>
+        <li><strong>Arrival and transport:</strong> the <a href="/plan-your-trip/dhaka-airport-arrival-guide/">Dhaka airport arrival process</a> and <a href="/plan-your-trip/transport-in-bangladesh/">transport across Bangladesh</a>.</li>
+        <li><strong>Safety, health and etiquette:</strong> <a href="/bangladesh-travel-safety/">travel safety</a>, <a href="/bangladesh-travel-health/">travel health</a>, and <a href="/plan-your-trip/cultural-etiquette/">cultural etiquette</a>.</li>
+        <li><strong>Destinations:</strong> city, coast, forest, tea country, and hill-region guides in our <a href="/destinations/">destinations section</a>.</li>
+      </ul>
 
       <h2>Independent Editorial Standard</h2>
       <p>
-        We operate strictly as an independent travel publication. We do not represent government agencies, and our guides prioritize accurate official sources alongside genuine travel realities to help visitors make informed decisions.
+        Bangladesh Travel Guide is an independent travel blog run by an individual publisher. We are not a government body, a tour operator, an embassy, or an official tourism board, and we do not issue visas, permits, or tickets. Where official rules apply, our guides point you to the relevant authority so you can confirm the current requirements.
+      </p>
+      <p>
+        We prioritise official and primary sources, record the date they were last accessed, and use cautious wording for anything that changes, such as fees, schedules, permit rules, and access restrictions. Where a destination carries real risk, such as areas covered by government travel warnings, we say so plainly and explain the implications. Our full approach is set out in our <a href="/editorial-policy/">Editorial Policy</a>.
+      </p>
+
+      <h2>How This Site Is Funded</h2>
+      <p>
+        Bangladesh Travel Guide is free to read and is supported by advertising and affiliate partnerships. Some pages contain affiliate links, including links to Booking.com through the CJ Affiliate network. If you book through one of these links, we may earn a commission at no extra cost to you. The site also displays advertising served by Monetag.
+      </p>
+      <p>
+        These relationships do not determine what we recommend or how we describe risks, restrictions, or destinations. Affiliate links are clearly marked as sponsored in the page code, and we do not accept payment for favourable coverage. See our <a href="/disclaimer/">Disclaimer</a> and <a href="/privacy-policy/">Privacy Policy</a> for details on affiliate links, advertising, and analytics.
+      </p>
+
+      <h2>Corrections and Updates</h2>
+      <p>
+        Travel conditions in Bangladesh can change quickly. We review and update our guides as official information changes, but you should always check current requirements with official sources, airlines, operators, and your own government's travel advice before you travel. If you notice an error, an outdated rule, or a broken link, please let us know through the <a href="/contact/">Contact page</a>, and we will review it.
       </p>
 
       <div class="about-box">
         <h3>Need to Contact Us?</h3>
         <p>
-          Have questions, feedback, or a correction to report? Visit our <a href="/contact/">Contact Page</a> to send an inquiry.
+          Have a question, a correction, or feedback on a guide? Visit our <a href="/contact/">Contact page</a> to send an inquiry. Please note that we cannot arrange bookings, permits, or visas, or provide emergency assistance.
         </p>
       </div>
     </div>
@@ -81,6 +105,15 @@ const breadcrumbs = [{ name: 'About', path: '/about/' }];
     margin-bottom: var(--spacing-md);
   }
 
+  .about-body ul {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+  }
+
+  .about-body li {
+    margin-bottom: var(--spacing-xs);
+  }
+
   .about-box {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -94,5 +127,9 @@ const breadcrumbs = [{ name: 'About', path: '/about/' }];
     font-size: 1.125rem;
     color: var(--color-primary-dark);
     margin-bottom: var(--spacing-xs);
+  }
+
+  .about-box p:last-child {
+    margin-bottom: 0;
   }
 </style>

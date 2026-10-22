@@ -6,8 +6,8 @@ const breadcrumbs = [{ name: 'Contact', path: '/contact/' }];
 ---
 
 <BaseLayout 
-  title="Contact Us — Bangladesh Travel Guide" 
-  description="Contact Bangladesh Travel Guide for general inquiries, feedback, editorial corrections, or partnership inquiries."
+  title="Contact Bangladesh Travel Guide | Corrections, Feedback & Inquiries" 
+  description="Contact Bangladesh Travel Guide to report a correction, send feedback, or ask about partnerships. We are an independent travel blog and cannot help with visas, bookings, or emergencies."
 >
   <div class="container content-narrow section">
     <Breadcrumbs items={breadcrumbs} />
@@ -15,27 +15,60 @@ const breadcrumbs = [{ name: 'Contact', path: '/contact/' }];
     <header class="contact-header">
       <h1 class="contact-title">Contact Us</h1>
       <p class="contact-lead">
-        We welcome inquiries, corrections, and editorial feedback from readers and travel partners.
+        We welcome corrections, reader feedback, and partnership inquiries. Bangladesh Travel Guide is an independent blog, and we read every message.
       </p>
     </header>
 
     <div class="contact-body">
       <div class="contact-card">
-        <h2>Editorial & General Inquiries</h2>
+        <h2>Email the Editor</h2>
         <p>
-          If you have identified a travel rule that has changed or wish to report an error, please reach out to our editorial team via email:
+          For general inquiries, feedback, or corrections, please email us directly:
         </p>
         <p class="contact-email">
-          <strong>Email:</strong> <a href="mailto:shafaat.feni@gmail.com">contact@bangladeshtravelguide.com</a>
+         <strong>Email:</strong> <a href="mailto:shafaat.feni@gmail.com">shafaat.feni@gmail.com</a>
+        </p>
+        <p>
+         If the link does not open your email app, copy the address above or
+         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shafaat.feni@gmail.com&su=Bangladesh%20Travel%20Guide%20Inquiry" target="_blank" rel="noopener noreferrer">write to us in Gmail</a>.
+        </p>
+        <p>
+          We aim to reply as soon as we reasonably can, but we cannot guarantee a response time.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Reporting a Correction</h2>
+        <p>
+          Travel rules change often. If you have found an error, an outdated requirement, or a broken link, please include:
+        </p>
+        <ul>
+          <li>the address (URL) of the page;</li>
+          <li>what is incorrect and what you believe is correct; and</li>
+          <li>a link to an official source, if you have one.</li>
+        </ul>
+        <p>
+          We review each report against official sources. See our <a href="/editorial-policy/">Editorial Policy</a> for how we handle corrections.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Partnerships and Advertising</h2>
+        <p>
+          For business or partnership inquiries, please email us with a short description of your proposal. Partnerships do not influence our editorial content, safety advice, or destination coverage. Sponsored or affiliate content is always disclosed, as explained in our <a href="/disclaimer/">Disclaimer</a>.
         </p>
       </div>
 
       <div class="contact-notice">
-        <h3>Immigration & Official Emergency Notice</h3>
+        <h3>What We Cannot Help With</h3>
         <p>
-          Please note that Bangladesh Travel Guide is an independent travel publication. We cannot issue visas, check official visa status, or provide direct government support. For urgent consular assistance, contact your national embassy in Dhaka or official Bangladesh immigration authorities.
+          Bangladesh Travel Guide is an independent travel blog run by an individual publisher. We are not a government body, embassy, tour operator, or travel agent. We cannot issue or check visas, arrange permits, make or change bookings, or provide emergency assistance. For urgent help, contact local emergency services or your national embassy in Dhaka. For visa and entry questions, contact the official Bangladesh authorities or your nearest Bangladesh diplomatic mission.
         </p>
       </div>
+
+      <p class="contact-privacy">
+        Any information you send us is used only to read and respond to your message. See our <a href="/privacy-policy/">Privacy Policy</a> for details.
+      </p>
     </div>
   </div>
 </BaseLayout>
@@ -74,6 +107,15 @@ const breadcrumbs = [{ name: 'Contact', path: '/contact/' }];
     margin-bottom: var(--spacing-sm);
   }
 
+  .contact-card ul {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+  }
+
+  .contact-card li {
+    margin-bottom: var(--spacing-xs);
+  }
+
   .contact-email {
     font-size: 1.125rem;
     margin-top: var(--spacing-md);
@@ -92,5 +134,11 @@ const breadcrumbs = [{ name: 'Contact', path: '/contact/' }];
     font-size: 1rem;
     color: var(--color-primary-dark);
     margin-bottom: var(--spacing-xs);
+  }
+
+  .contact-privacy {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-lg);
   }
 </style>
