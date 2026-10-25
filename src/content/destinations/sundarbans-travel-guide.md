@@ -25,10 +25,6 @@ The Sundarbans is a UNESCO World Heritage site and one of the largest mangrove f
 
 ## Find a Hotel Near the Sundarbans (Khulna and Mongla)
 
-<div class="center-banner">
-<a href="https://www.jdoqocy.com/click-101859733-17342764" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.lduhtrp.net/image-101859733-17342764" width="480" height="260" alt="Find accommodation in Khulna and Mongla with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 Most visitors stay in Khulna the night before or after a boat trip, since safari vessels depart from Khulna or Mongla and often leave early. Compare locations, guest reviews, and cancellation terms, and check whether your tour operator includes a hotel night in the package before booking separately.
 
 ## When to Visit the Sundarbans

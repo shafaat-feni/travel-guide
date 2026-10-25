@@ -29,10 +29,6 @@ The Chittagong Hill Tracts (CHT) cover the districts of Bandarban, Rangamati, an
 
 ## Find a Hotel Near the Chittagong Hill Tracts
 
-<div class="center-banner">
-<a href="https://www.jdoqocy.com/click-101859733-17342764" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.lduhtrp.net/image-101859733-17342764" width="480" height="260" alt="Find accommodation in Chattogram and the Chittagong Hill Tracts with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 Most routes into the hills start in Chattogram, so many travellers base themselves there or in Cox's Bazar and decide on a hill-district day trip only after checking current conditions. A hotel booking is not a travel permit and does not mean a district is open to foreign visitors. Compare locations, guest reviews, and cancellation terms, and choose flexible rates, because trips to this region are cancelled or rerouted more often than elsewhere.
 
 ## Government Travel Advice: Read This First

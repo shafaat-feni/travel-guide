@@ -29,10 +29,6 @@ Sylhet, in northeastern Bangladesh, combines tea estates, hill-fed rivers, wetla
 
 ## Find a Hotel in Sylhet
 
-<div class="center-banner">
-<a href="https://www.jdoqocy.com/click-101859733-17342764" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.lduhtrp.net/image-101859733-17342764" width="480" height="260" alt="Find accommodation in Sylhet with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 Sylhet city is the practical base for most itineraries, since Ratargul, Bisnakandi, Lalakhal, and Jaflong are all day trips from it. Compare locations, guest reviews, and cancellation terms before booking. A hotel near the railway station or the main city sights saves time on early starts. Resorts closer to the tea estates and the Tamabil road suit travellers who want a quieter stay, but check how you will reach them after dark.
 
 ## When to Visit Sylhet

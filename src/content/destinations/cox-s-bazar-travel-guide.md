@@ -25,10 +25,6 @@ Cox's Bazar is Bangladesh's best-known beach destination, with a long sandy shor
 
 ## Find a Hotel in Cox's Bazar
 
-<div class="center-banner">
-<a href="https://www.tkqlhce.com/click-101859733-17343899" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.awltovhc.com/image-101859733-17343899" width="480" height="260" alt="Find accommodation in Cox's Bazar with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 Compare hotel locations, guest reviews, cancellation terms, and the total price before booking. Beachfront accommodation can be convenient, but a room a short walk inland may offer better value. Check the exact location on a map, especially if you plan to visit the beach early in the morning or return after dinner.
 
 ## When to Visit Cox's Bazar
@@ -114,6 +110,7 @@ Cox's Bazar can fit into a wider trip that starts in Dhaka and continues to othe
 - [Sylhet Travel Guide](/destinations/sylhet-travel-guide/)
 - [Srimangal Travel Guide](/destinations/srimangal-travel-guide/)
 - [Sundarbans Travel Guide](/destinations/sundarbans-travel-guide/)
+- [Chittagong hill tracts travel guide](/destinations/chittagong-hill-tracts)
 - [All Bangladesh destinations](/destinations/)
 - [Plan your trip to Bangladesh](/plan-your-trip/)
 

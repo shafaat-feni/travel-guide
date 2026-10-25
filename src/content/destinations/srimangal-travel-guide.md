@@ -27,10 +27,6 @@ Srimangal (also spelled **Sreemangal**) is a small town in Moulvibazar District 
 
 The area is often called Bangladesh's tea capital. Tea gardens, rubber plantations, lemon orchards and villages surround the town, while **Lawachara National Park** offers a chance to walk beneath tropical forest canopy and look for wildlife. Srimangal is also an easy base for exploring other parts of Moulvibazar District and continuing to nearby [Sylhet](/destinations/sylhet-travel-guide/).
 
-<div class="center-banner">
-<a href="https://www.tkqlhce.com/click-101859733-17343899" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.awltovhc.com/image-101859733-17343899" width="480" height="260" alt="Find accommodation in Srimangal with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 ## Best Things to Do in Srimangal
 
 ### 1. Walk in Lawachara National Park

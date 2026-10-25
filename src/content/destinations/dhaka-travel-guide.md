@@ -31,10 +31,6 @@ If you are arriving from abroad, read the [Dhaka Airport Arrival Guide](/plan-yo
 
 ## Find a Hotel in Dhaka
 
-<div class="center-banner">
-<a href="https://www.tkqlhce.com/click-101859733-17343899" target="_blank" rel="sponsored nofollow noopener"><img src="https://www.awltovhc.com/image-101859733-17343899" width="480" height="260" alt="Find hotels and accommodation in Dhaka with Booking.com" border="0" loading="lazy" /></a>
-</div>
-
 Choose accommodation around the places you expect to visit, not just by the room price. Gulshan, Banani, and Baridhara have many hotels and restaurants used by business travellers and international visitors; central areas may be more convenient for some historic sights but can be noisy and congested. Check recent reviews, the exact location, airport-transfer options, cancellation terms, and the full price before booking.
 
 ## Top Places to Visit in Dhaka
