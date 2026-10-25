@@ -221,4 +221,4 @@ Before you leave for the airport, make sure you have:
 - [ ] Checked your visa's validity, permitted stay, and number of entries.
 - [ ] Rechecked official guidance shortly before departure.
 
-Visa and entry rules can change. This guide is intended to help international tourists prepare, but it is not an official immigration decision. The final requirements are those confirmed by the Government of Bangladesh and the diplomatic mission or immigration authority responsible for your case.
+Visa and entry rules can change. This guide is intended to help international tourists prepare, but it is not an official immigration decision or legal advice. The final requirements are those confirmed by the Government of Bangladesh and the diplomatic mission or immigration authority responsible for your case.
