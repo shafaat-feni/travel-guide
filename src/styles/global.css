@@ -163,8 +163,8 @@ tr:hover td {
 
 /* Style and normalize all checkboxes */
 input[type="checkbox"] {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 0.1rem;
+  height: 0.1rem;
   accent-color: var(--color-primary);
   vertical-align: middle;
   cursor: pointer;
