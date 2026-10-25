@@ -14,3 +14,33 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "https://bangladeshtravelguide.com/home"
+  to = "https://bangladeshtravelguide.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://bangladeshtravelguide.com/bangladesh-travel-guidelines/domestic-travel"
+  to = "https://bangladeshtravelguide.com/plan-your-trip/transport-in-bangladesh/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://bangladeshtravelguide.com/bangladesh-travel-guidelines/visa-airport-guide"
+  to = "https://bangladeshtravelguide.com/plan-your-trip/bangladesh-visa/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://bangladeshtravelguide.com/bangladesh-tourist-spots/other-tourist-spots"
+  to = "https://bangladeshtravelguide.com/destinations/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://bangladeshtravelguide.com/bangladesh-travel-guidelines/departure-from-bangladesh"
+  to = "https://bangladeshtravelguide.com/plan-your-trip/"
+  status = 301
+  force = true
