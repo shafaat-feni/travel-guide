@@ -20,11 +20,6 @@ Bangladesh is known for its hospitality, lively public life, and strong family a
 
 Bangladesh is generally socially conservative, particularly in rural communities and around religious sites. In Dhaka and other large cities, clothing is more varied, but modest attire is a practical choice in most public settings.
 
-<div class="center-banner">
-<a href="https://www.dpbolvw.net/click-101859733-17362697" target="_blank" rel="sponsored nofollow noopener">
-<img src="https://www.awltovhc.com/image-101859733-17362697" width="336" height="280" alt="Book Your Flight to Dhaka From Booking.com" border="0"/></a>
-</div>
-
 ### General guidelines
 
 - **For men:** Lightweight trousers or jeans with a shirt or polo shirt are suitable for most situations. Shorts are fine in some casual settings, but long trousers are a safer choice for religious sites, formal offices, and visits to local homes.

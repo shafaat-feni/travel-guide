@@ -40,11 +40,6 @@ If you are arriving through Dhaka, read our [Dhaka Airport Arrival Guide](/plan-
 - **Use reputable providers:** Exchange money through banks or licensed money changers, and keep the receipt.
 - **Do not rely on one payment method:** Card acceptance, ATM availability, and network service can vary, especially outside major urban areas.
 
-<div class="center-banner">
-<a href="https://www.anrdoezrs.net/click-101859733-17362700" target="_blank" rel="sponsored nofollow noopener">
-<img src="https://www.lduhtrp.net/image-101859733-17362700" width="336" height="280" alt="Book Your Flight to Dhaka From Booking.com" border="0"/></a>
-</div>
-
 ## 1. What currency is used in Bangladesh?
 
 Bangladesh uses the **Bangladeshi taka**, with the currency code **BDT** and symbol **৳**. Prices may be displayed with the symbol or written as an amount followed by “taka” or “BDT.”

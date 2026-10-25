@@ -26,18 +26,11 @@ A stomach upset, a bad mosquito bite, or an unexpected injury can disrupt a trip
 
 **Before you travel:** Arrange a travel-health appointment ideally 4–6 weeks before departure. Some vaccines need more than one dose, and malaria prevention depends on your itinerary. Check the latest advice from the <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/bangladesh" target="_blank" rel="noopener noreferrer">CDC's Bangladesh travel-health page</a> and your own country's health authority.
 
-<div class="center-banner">
-<a href="https://www.anrdoezrs.net/click-101859733-17086286" target="_blank" rel="sponsored nofollow noopener">
-<img src="https://www.ftjcfx.com/image-101859733-17086286" width="600" height="600" alt="Issue your Travel Insurance From World Nomads" border="0"/></a>
-</div>
-
 ## Arrange Travel Medical Insurance Before Departure
 
 Medical care can be straightforward for minor problems in major cities, but a serious illness or injury away from a well-equipped hospital can become complicated and expensive. Check that your policy covers emergency treatment and, if medically necessary, evacuation or repatriation.
 
 If you are comparing policies, you can explore <b>World Nomads travel insurance</b> from the upper banner and review the policy options available to residents of your country. Coverage, prices, eligibility, benefit limits, and exclusions vary by residence and plan; read the full policy wording before buying. Confirm whether your planned activities—including trekking, cycling, diving, or other adventure activities—are covered.
-
-<small>Affiliate disclosure: This page contains an affiliate link. If you purchase through it, we may earn a commission at no extra cost to you. This does not change our advice.</small>
 
 ## Vaccinations and Pre-Trip Health Advice
 

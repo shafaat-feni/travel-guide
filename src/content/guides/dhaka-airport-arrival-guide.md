@@ -37,21 +37,6 @@ Hazrat Shahjalal International Airport (DAC) is the main international gateway t
 
 This guide explains the practical steps for **arriving at Dhaka airport**, including what to keep in your hand luggage, how to handle a Bangladesh Visa on Arrival if you qualify, where to get local connectivity, and how to choose transport after leaving the terminal. Airport procedures, service counters, and transport arrangements can change, so follow current airport signs and instructions from officials.
 
-<div style="display: flex; justify-content: center; margin: 2rem 0;">
-  <a 
-    href="https://www.tkqlhce.com/click-101859733-17362672" 
-    target="_blank" 
-    rel="sponsored nofollow noopener"
-  >
-    <img 
-      src="https://www.tqlkg.com/image-101859733-17362672" 
-      width="728" 
-      height="90" 
-      alt="Booking.com Ticket Deals" 
-    />
-  </a>
-</div>
-
 ## Before you fly to Dhaka: prepare these essentials
 
 Keep the following items in your personal bag, not in checked baggage:
@@ -70,11 +55,6 @@ If you have not booked your journey yet, compare routes and fares before purchas
 For entry requirements, read our [Bangladesh Tourist Visa Requirements and Visa on Arrival Guide](/plan-your-trip/bangladesh-visa/).
 
 ## Step 1: Follow the signs to international arrivals
-
-<div class="center-banner">
-<a href="https://www.dpbolvw.net/click-101859733-17362682" target="_blank" rel="sponsored nofollow noopener">
-<img src="https://www.tqlkg.com/image-101859733-17362682" width="480" height="260" alt="Book Your Flight to Dhaka From Booking.com" border="0"/></a>
-</div>
 
 After leaving the aircraft, follow the airport signs for **Arrivals** and **Immigration**. Keep your passport and visa documents easy to reach. Follow staff instructions if passengers are directed to different corridors or queues.
 

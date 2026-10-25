@@ -46,21 +46,6 @@ Use these official resources before booking non-refundable travel:
 - <a href="https://dip.gov.bd/" target="_blank" rel="noopener noreferrer">Bangladesh Department of Immigration and Passports</a> — immigration and passport authority information.
 - The Bangladesh diplomatic mission responsible for your place of residence — for advice on your nationality, application location, required documents, and current fees.
 
-<div style="display: flex; justify-content: center; margin: 2rem 0;">
-  <a 
-    href="https://www.tkqlhce.com/click-101859733-17362672" 
-    target="_blank" 
-    rel="sponsored nofollow noopener"
-  >
-    <img 
-      src="https://www.tqlkg.com/image-101859733-17362672" 
-      width="728" 
-      height="90" 
-      alt="Booking.com Ticket Deals" 
-    />
-  </a>
-</div>
-
 If your eligibility is unclear, **apply for an advance visa or obtain written guidance from the relevant Bangladesh mission before departure** rather than relying on being allowed to board or enter.
 
 ## 1. Bangladesh tourist visa: advance application
