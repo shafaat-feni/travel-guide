@@ -172,7 +172,7 @@ A practical approach is to:
 - Replenish cash through reputable ATMs or exchange providers as needed.
 - Carry extra cash when visiting remote areas where ATM access may be limited, while avoiding unnecessary amounts.
 
-If you are travelling outside Dhaka, plan ahead for access to cash. Some destinations may have fewer ATMs or limited card acceptance. Read the relevant destination guide before leaving a major city, such as our guides to [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chittagong hill tracts](/destinations/chittagong-hill-tracts) and the [Sundarbans](/destinations/sundarbans-travel-guide/).
+If you are travelling outside Dhaka, plan ahead for access to cash. Some destinations may have fewer ATMs or limited card acceptance. Read the relevant destination guide before leaving a major city, such as our guides to [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chattogram hill tracts](/destinations/chattogram-hill-tracts/) and the [Sundarbans](/destinations/sundarbans-travel-guide/).
 
 ## 8. Is tipping expected in Bangladesh?
 

@@ -110,7 +110,7 @@ Cox's Bazar can fit into a wider trip that starts in Dhaka and continues to othe
 - [Sylhet Travel Guide](/destinations/sylhet-travel-guide/)
 - [Srimangal Travel Guide](/destinations/srimangal-travel-guide/)
 - [Sundarbans Travel Guide](/destinations/sundarbans-travel-guide/)
-- [Chittagong hill tracts travel guide](/destinations/chittagong-hill-tracts)
+- [Chattogram hill tracts travel guide](/destinations/chattogram-hill-tracts/)
 - [All Bangladesh destinations](/destinations/)
 - [Plan your trip to Bangladesh](/plan-your-trip/)
 

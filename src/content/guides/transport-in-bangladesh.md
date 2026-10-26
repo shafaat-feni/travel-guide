@@ -71,7 +71,7 @@ Practical booking tips:
 
 Official information: <a href="https://railway.gov.bd/" target="_blank" rel="noopener noreferrer">Bangladesh Railway website</a>.
 
-Our destination guides can help you plan onward travel to [Dhaka](/destinations/dhaka-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chittagong hill tracts](chittagong-hill-tracts) and [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/).
+Our destination guides can help you plan onward travel to [Dhaka](/destinations/dhaka-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chattogram hill tracts](Chattogram-hill-tracts) and [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/).
 
 ## Domestic flights
 

@@ -44,7 +44,7 @@ Bangladesh has several mobile operators, including Grameenphone, Robi, Banglalin
 - **Banglalink:** Another major option, with services across Bangladesh.
 - **Teletalk:** The state-owned operator.
 
-In Dhaka and other large cities, several operators may work well. In remote or less densely populated areas, coverage can be less predictable. If you plan to visit the [Sundarbans](/destinations/sundarbans-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), the [Sylhet region](/destinations/sylhet-travel-guide/), [hill tracts area of Chittagong](/destinations/chittagong-hill-tracts) or coastal areas around [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), check coverage for your specific route and accommodation rather than relying on city coverage alone. Forests, islands, hills and boat journeys may have weak or no signal.
+In Dhaka and other large cities, several operators may work well. In remote or less densely populated areas, coverage can be less predictable. If you plan to visit the [Sundarbans](/destinations/sundarbans-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), the [Sylhet region](/destinations/sylhet-travel-guide/), [hill tracts area of Chattogram](/destinations/chattogram-hill-tracts/) or coastal areas around [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), check coverage for your specific route and accommodation rather than relying on city coverage alone. Forests, islands, hills and boat journeys may have weak or no signal.
 
 For official package information, start with the operator's website:
 - <a href="https://www.grameenphone.com/" target="_blank" rel="noopener noreferrer">Grameenphone</a>

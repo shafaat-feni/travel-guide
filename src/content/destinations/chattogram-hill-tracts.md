@@ -1,13 +1,13 @@
 ---
-title: "Chittagong Hill Tracts Travel Guide: Permits, Risks & Safety Advice"
-description: "Before you plan a trip to the Chittagong Hill Tracts (Bandarban, Rangamati, Khagrachhari): government travel advice, foreigner permits, security risks, floods, and safer alternatives."
+title: "Chattogram Hill Tracts Travel Guide: Permits, Risks & Safety Advice"
+description: "Before you plan a trip to the Chattogram Hill Tracts (Bandarban, Rangamati, Khagrachhari): government travel advice, foreigner permits, security risks, floods, and safer alternatives."
 publishDate: 2026-10-18
 draft: false
 category: "Destinations"
 region: "Southeastern Bangladesh (Chattogram Division)"
 bestTimeToVisit: "November to February"
-featuredImage: "/images/destinations/chittagong-sajek-valley.webp"
-featuredImageAlt: "Forested hills and Sajek Valley in the Chittagong Hill Tracts of Bangladesh"
+featuredImage: "/images/destinations/chattogram-sajek-valley.webp"
+featuredImageAlt: "Forested hills and Sajek Valley in the Chattogram Hill Tracts of Bangladesh"
 sources:
   - title: "Bangladesh travel advice"
     url: "https://www.gov.uk/foreign-travel-advice/bangladesh"
@@ -21,13 +21,13 @@ sources:
     url: "https://foreigner.rangamati.gov.bd/home"
     publisher: "Office of the Deputy Commissioner, Rangamati"
     accessedDate: "2026-10-21"
-seoTitle: "Chittagong Hill Tracts Travel Guide: Is Bandarban Safe? Permits & Risks"
-seoDescription: "Is it safe to visit the Chittagong Hill Tracts? Government travel advice, permit requirements for foreigners, Bandarban, Rangamati and Khagrachhari risks, and alternatives."
+seoTitle: "Chattogram Hill Tracts Travel Guide: Is Bandarban Safe? Permits & Risks"
+seoDescription: "Is it safe to visit the Chattogram Hill Tracts? Government travel advice, permit requirements for foreigners, Bandarban, Rangamati and Khagrachhari risks, and alternatives."
 ---
 
-The Chittagong Hill Tracts (CHT) cover the districts of Bandarban, Rangamati, and Khagrachhari in southeastern Bangladesh. The region has forested ridges, Kaptai Lake, waterfalls, trekking routes, and communities with their own languages and traditions, which makes it one of the most scenic parts of the country. It is also the part of Bangladesh that foreign governments warn against most strongly. Read the risks and permit requirements below before you add it to an itinerary, and treat the rest of this guide as planning information rather than encouragement to go.
+The **Chattogram** (also widely known internationally by its former English name **Chittagong**) Hill Tracts (CHT) cover the districts of Bandarban, Rangamati, and Khagrachhari in southeastern Bangladesh. The region has forested ridges, Kaptai Lake, waterfalls, trekking routes, and communities with their own languages and traditions, which makes it one of the most scenic parts of the country. It is also the part of Bangladesh that foreign governments warn against most strongly. Read the risks and permit requirements below before you add it to an itinerary, and treat the rest of this guide as planning information rather than encouragement to go.
 
-## Find a Hotel Near the Chittagong Hill Tracts
+## Find a Hotel Near the Chattogram Hill Tracts
 
 Most routes into the hills start in Chattogram, so many travellers base themselves there or in Cox's Bazar and decide on a hill-district day trip only after checking current conditions. A hotel booking is not a travel permit and does not mean a district is open to foreign visitors. Compare locations, guest reviews, and cancellation terms, and choose flexible rates, because trips to this region are cancelled or rerouted more often than elsewhere.
 
@@ -35,8 +35,8 @@ Most routes into the hills start in Chattogram, so many travellers base themselv
 
 At the time of writing (October 2026), the main official advice for the region is:
 
-- **United Kingdom:** The FCDO advises against all but essential travel to the Chittagong Hill Tracts, covering Rangamati, Khagrachhari, and Bandarban. It warns that travel insurance can be invalidated if you travel against FCDO advice.
-- **United States:** The State Department rates Bangladesh overall at Level 2 (exercise increased caution) but advises Level 4, do not travel, for the Chittagong Hill Tracts, citing unrest, crime, terrorism, and kidnapping. The US Embassy also notes that U.S. government employees need permission from the Government of Bangladesh to travel there.
+- **United Kingdom:** The FCDO advises against all but essential travel to the Chattogram Hill Tracts, covering Rangamati, Khagrachhari, and Bandarban. It warns that travel insurance can be invalidated if you travel against FCDO advice.
+- **United States:** The State Department rates Bangladesh overall at Level 2 (exercise increased caution) but advises Level 4, do not travel, for the Chattogram Hill Tracts, citing unrest, crime, terrorism, and kidnapping. The US Embassy also notes that U.S. government employees need permission from the Government of Bangladesh to travel there.
 
 Check your own government's current advice before you plan, because it can change quickly. If you travel against official advice, your insurer may refuse a claim and your embassy's ability to help may be very limited. Read the <a href="https://www.gov.uk/foreign-travel-advice/bangladesh" target="_blank" rel="noopener noreferrer">FCDO advice</a> and the <a href="https://travel.state.gov/en/international-travel/travel-advisories/bangladesh.html" target="_blank" rel="noopener noreferrer">U.S. State Department advisory</a> directly, and see our [Bangladesh Travel Safety Guide](/bangladesh-travel-safety/) for general precautions.
 
@@ -70,11 +70,11 @@ Healthcare facilities in the hills are limited, and serious cases are usually mo
 
 ### Insurance and consular support
 
-Check whether your policy covers the Chittagong Hill Tracts, adventure activities such as trekking, and emergency evacuation. If your government advises against travel, standard policies may not pay out.
+Check whether your policy covers the Chattogram Hill Tracts, adventure activities such as trekking, and emergency evacuation. If your government advises against travel, standard policies may not pay out.
 
 ## Permits and Entry Rules for Foreign Visitors
 
-Foreign nationals have needed government approval to visit the Chittagong Hill Tracts for many years, and the process has changed over time. An earlier government order required foreigners to apply to the Home Ministry about a month before travel, with approval depending on security clearance. Today, the district administration of Rangamati runs an official <a href="https://foreigner.rangamati.gov.bd/home" target="_blank" rel="noopener noreferrer">online permission system for foreign tourists</a>. Its application asks for passport and visa copies, an itinerary, accommodation details, and the name of the licensed tour operator. Bandarban and Khagrachhari have their own district procedures.
+Foreign nationals have needed government approval to visit the Chattogram Hill Tracts for many years, and the process has changed over time. An earlier government order required foreigners to apply to the Home Ministry about a month before travel, with approval depending on security clearance. Today, the district administration of Rangamati runs an official <a href="https://foreigner.rangamati.gov.bd/home" target="_blank" rel="noopener noreferrer">online permission system for foreign tourists</a>. Its application asks for passport and visa copies, an itinerary, accommodation details, and the name of the licensed tour operator. Bandarban and Khagrachhari have their own district procedures.
 
 Because rules, offices, and processing times change, do not rely on a hotel, driver, or social-media post to confirm that you are allowed in. Instead:
 
@@ -86,11 +86,11 @@ Because rules, offices, and processing times change, do not rely on a hotel, dri
 
 Researchers, journalists, and aid workers usually need approval from the relevant ministries, not just the district office. Past orders have also required foreigners to speak with community members only in the presence of officials, so ask your operator whether any such condition applies on your dates.
 
-## When to Visit the Chittagong Hill Tracts
+## When to Visit the Chattogram Hill Tracts
 
 If you decide to go and conditions allow it, November to February is generally the most comfortable and driest period, with cooler mornings and clearer views. March to May is hot and humid. From roughly June to October, heavy rain increases the risk of landslides, floods, swollen rivers, and cancelled boat and road services. Even in the dry season, closures and blockades can occur, so confirm conditions with your operator immediately before departure. See our [Best Time to Visit Bangladesh guide](/plan-your-trip/best-time-to-visit/) for seasonal planning across the country.
 
-## Main Places in the Chittagong Hill Tracts
+## Main Places in the Chattogram Hill Tracts
 
 Listing a place here is not a statement that it is currently open to foreign visitors. Access depends on current security and permit conditions.
 
@@ -110,7 +110,7 @@ Bandarban is the base for the hills' most remote and demanding trips, including 
 
 Khagrachhari offers viewpoints, waterfalls such as Richhang, the Alutila cave, and routes towards Sajek. It is the least visited of the three districts by foreign tourists, and the same permit and security checks apply.
 
-## How to Get to the Chittagong Hill Tracts
+## How to Get to the Chattogram Hill Tracts
 
 The three hill districts are reached by road from Chattogram, which is the usual gateway. Journeys of roughly 75 to 100 km or more can take several hours, depending on traffic, road works, and weather, and routes into the hills have checkpoints. Intercity buses also connect Dhaka with Bandarban, Rangamati, and Khagrachhari, but foreign visitors should arrange transport and permission through a licensed operator rather than turning up at a bus station.
 
@@ -134,13 +134,13 @@ The hills are home to many ethnic communities, including the Chakma, Marma, Trip
 
 If your government advises against travel to the hills, or you do not want the added risk and paperwork, you can see similar scenery elsewhere in Bangladesh:
 
-- **Tea hills and forests:** [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/) and [Chittagong hill tarcts](chittagong-hill-tracts) offer tea estates, rivers, and swamp forest.
+- **Tea hills and forests:** [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/) and [Chattogram hill tarcts](/destinations/chattogram-hill-tracts/) offer tea estates, rivers, and swamp forest.
 - **Coastline:** The [Cox's Bazar Travel Guide](/destinations/cox-s-bazar-travel-guide/) covers beaches, Himchari, and Marine Drive.
 - **Mangrove wilderness:** The [Sundarbans Travel Guide](/destinations/sundarbans-travel-guide/) covers boat safaris and wildlife.
 
 ## Common Questions
 
-### Is it safe to visit the Chittagong Hill Tracts?
+### Is it safe to visit the Chattogram Hill Tracts?
 
 The risk is higher than in most of Bangladesh. The UK advises against all but essential travel and the US advises against all travel to the region, citing unrest, crime, terrorism, and kidnapping. Some visits take place without problems, but conditions can change quickly, and remote areas carry the most risk.
 

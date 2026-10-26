@@ -46,7 +46,7 @@ This is the most straightforward season for many international visitors. Days ar
 
 **Best for:**
 - Exploring [Dhaka](/destinations/dhaka-travel-guide/) and historical sites.
-- Visiting the beaches around [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/) and hill tracts of [Chittagong](/destinations/chittagong-hill-tracts).
+- Visiting the beaches around [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/) and hill tracts of [Chattogram](/destinations/chattogram-hill-tracts/).
 - Taking planned boat excursions in the [Sundarbans](/destinations/sundarbans-travel-guide/).
 - Walking through tea gardens and countryside around [Srimangal](/destinations/srimangal-travel-guide/) and [Sylhet](/destinations/sylhet-travel-guide/).
 
@@ -203,4 +203,4 @@ Once you have chosen your travel dates, use our practical guides to prepare:
 - [Bangladesh Travel Health Guide](/bangladesh-travel-health/)
 - [Bangladesh Travel Safety Guide](/bangladesh-travel-safety/)
 
-For destination-specific planning, explore [Dhaka](/destinations/dhaka-travel-guide/), [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chittagong hill tracts](/destinations/chittagong-hill-tracts) and the [Sundarbans](/destinations/sundarbans-travel-guide/).
+For destination-specific planning, explore [Dhaka](/destinations/dhaka-travel-guide/), [Cox's Bazar](/destinations/cox-s-bazar-travel-guide/), [Sylhet](/destinations/sylhet-travel-guide/), [Srimangal](/destinations/srimangal-travel-guide/), [Chattogram hill tracts](/destinations/chattogram-hill-tracts/) and the [Sundarbans](/destinations/sundarbans-travel-guide/).

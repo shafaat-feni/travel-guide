@@ -33,7 +33,7 @@ Travel advisories are updated when security conditions, weather events, or local
 - <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bangladesh-travel-advisory.html" target="_blank" rel="noopener noreferrer">U.S. Department of State: Bangladesh Travel Advisory</a>
 - <a href="https://bd.usembassy.gov/" target="_blank" rel="noopener noreferrer">U.S. Embassy in Bangladesh</a>
 
-**Pay attention to regional warnings, not just the overall country rating.** At the time this page was reviewed on 21 October 2026, the UK FCDO advised against all but essential travel to the Chittagong Hill Tracts districts of Rangamati, Khagrachari, and Bandarban. This advice can change and may differ between governments. Check the current notice and map before planning a visit; do not rely on this page as a live alert.
+**Pay attention to regional warnings, not just the overall country rating.** At the time this page was reviewed on 21 October 2026, the UK FCDO advised against all but essential travel to the Chattogram Hill Tracts districts of Rangamati, Khagrachari, and Bandarban. This advice can change and may differ between governments. Check the current notice and map before planning a visit; do not rely on this page as a live alert.
 
 If your government offers a traveller-registration or alert service, consider enrolling before departure. Save your embassy or high commission's emergency contact details separately from your phone.
 

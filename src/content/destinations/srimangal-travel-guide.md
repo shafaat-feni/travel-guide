@@ -150,8 +150,8 @@ Bring comfortable walking shoes, lightweight clothes, insect repellent, drinking
 ## Related Travel Guides
 
 - [Sylhet Travel Guide](/destinations/sylhet-travel-guide/)
-- [Cox's Bazar Travel Guide](/destinations/coxs-bazar-travel-guide/)
+- [Cox's Bazar Travel Guide](/destinations/cox-s-bazar-travel-guide/)
 - [Sundarbans Travel Guide](/destinations/sundarbans-travel-guide/)
 - [Plan Your Trip to Bangladesh](/plan-your-trip/)
-- [Best Time to Visit Bangladesh](/plan-your-trip/best-time-to-visit-bangladesh/)
+- [Best Time to Visit Bangladesh](/plan-your-trip/best-time-to-visit/)
 - [Bangladesh Travel Safety Guide](/bangladesh-travel-safety/)
