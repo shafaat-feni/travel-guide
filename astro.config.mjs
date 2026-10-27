@@ -5,7 +5,8 @@ export default defineConfig({
   site: 'https://bangladeshtravelguide.com',
   trailingSlash: 'always',
   build: {
-    format: 'directory'
+    format: 'directory',
+    inlineStylesheets: 'auto', // Automatically inlines small CSS files to eliminate render-blocking requests
   },
   integrations: [
     sitemap()

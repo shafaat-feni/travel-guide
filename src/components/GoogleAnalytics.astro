@@ -1,0 +1,14 @@
+---
+// src/components/GoogleAnalytics.astro
+const MEASUREMENT_ID = 'G-XB7DGD3PXP';
+---
+
+<!-- Google tag (gtag.js) -->
+<script async src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}></script>
+<script is:inline define:vars={{ MEASUREMENT_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', MEASUREMENT_ID);
+</script>

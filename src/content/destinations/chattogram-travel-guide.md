@@ -27,7 +27,7 @@ seoDescription: "Explore Chattogram, Bangladesh—also called Chattogram. Find c
 
 **Chattogram**, also widely known internationally by its former English name **Chittagong**, is a major port city in southeastern Bangladesh. It is an important commercial centre with a long maritime history, busy markets, religious landmarks, museums and pockets of green space among its built-up neighbourhoods.
 
-Travellers may see either spelling on airline tickets, booking platforms, railway information and older travel references. When searching for transport or accommodation, try both **Chattogram** and **Chattogram** to find the widest range of results. This guide focuses on the city itself: its urban attractions, local transport, accommodation and practical planning. It does not cover nearby regions as separate destinations.
+Travellers may see either spelling on airline tickets, booking platforms, railway information and older travel references. When searching for transport or accommodation, try both **Chattogram** and **Chittagong** to find the widest range of results. This guide focuses on the city itself: its urban attractions, local transport, accommodation and practical planning. It does not cover nearby regions as separate destinations.
 
 ## Best Things to Do in Chattogram
 
